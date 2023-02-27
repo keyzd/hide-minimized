@@ -1,6 +1,6 @@
-# GNOME shell hide minimized in overview
+# GNOME shell hide minimized in alt-tab
 
-This is a gnome shell extension to hide minimized windows in overview
+This is a gnome shell extension to hide minimized windows in alt-tab
 
 ## How to install:
 
