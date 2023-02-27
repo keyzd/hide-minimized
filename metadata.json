@@ -1,5 +1,5 @@
 {
-    "description": "Hide minimized in window switching",
+    "description": "Hide minimized in alt-tab",
     "uuid": "hide-minimized@danigm.net",
     "name": "Hide minimized",
     "url": "https://github.com/danigm/hide-minimized",
