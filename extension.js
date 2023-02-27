@@ -2,7 +2,7 @@ const Config = imports.misc.config;
 const [major] = Config.PACKAGE_VERSION.split('.');
 const shellVersion = Number.parseInt(major);
 
-const isOverviewWindow = imports.ui.workspace.Workspace.prototype._isOverviewWindow;
+//const isOverviewWindow = imports.ui.workspace.Workspace.prototype._isOverviewWindow;
 const { Workspace } = imports.ui.workspace;
 const { altTab } = imports.ui;
 const { getWindows } = altTab;
@@ -16,13 +16,13 @@ function init() {
 }
 
 function enable() {
-  Workspace.prototype._isOverviewWindow = (win) => {
-    const show = isOverviewWindow(win);
-    let meta = win;
-    if (win.get_meta_window)
-      meta = win.get_meta_window()
-    return show && !meta.minimized;
-  };
+//  Workspace.prototype._isOverviewWindow = (win) => {
+//    const show = isOverviewWindow(win);
+//    let meta = win;
+//    if (win.get_meta_window)
+//      meta = win.get_meta_window()
+//    return show && !meta.minimized;
+//  };
   altTab.getWindows = (workspace) => {
     const windows = getWindows(workspace);
     return windows.filter((w, i, a) => !w.minimized);
@@ -68,7 +68,7 @@ function enable() {
 }
 
 function disable() {
-  Workspace.prototype._isOverviewWindow = isOverviewWindow;
+//  Workspace.prototype._isOverviewWindow = isOverviewWindow;
   altTab.getWindows = getWindows;
   if(shellVersion >= 42) {
     UIWindowSelector.prototype.capture = capture;
